@@ -1,0 +1,569 @@
+#wrap {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 165px;
+    /* background-color: bisque; */
+}
+
+#header_in {
+    margin: 0 auto;
+    width: 1000px;
+    height: 119px;
+    /* background-color: rgb(182, 212, 47); */
+}
+
+#header_in .logo {
+    float: left;
+    width: 230px;
+    height: 115px;
+    /* background-color: rgb(121, 75, 20); */
+    padding-top: 50px;
+    /* 박스 사이즈 고정 */
+    box-sizing: border-box;
+}
+
+#header_in .menu {
+    float: right;
+    width: 670px;
+    height: 115px;
+    /* background-color: rgb(138, 138, 202); */
+}
+
+#header_in .menu .infomn {
+    /* 
+        float: right;를 해서 오른쪽에 붙이면
+        나중에 글자를 작성했을 때 아래에 작성되는 게 아니라
+        같은 줄 왼쪽부터 작성이 된다.
+        그러면 나중에 리스트를 만들어도 왼쪽에 붙어버린다.
+    */
+    float: left;
+    margin: 10px 0 0 400px;
+}
+
+#header_in .menu .infomn li {
+    float: left;
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+    padding-right: 10px;
+    line-height: 11px;
+    /* 가운데 선을 넣을 때는 height 말고 line-height를 사용하자 */
+}
+
+#header_in .menu .infomn li:last-child {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+
+#header_in .menu .infomn li a {
+    font-size: 11px;
+}
+
+#header_in .q_mn {
+    float: left;
+    margin: 25px 0 0 160px;
+}
+
+#header_in .q_mn li {
+    float: left;
+}
+
+#header_in .q_mn li:after {
+    content: "·";
+    font-size: 20px;
+    padding: 0 10px;
+    line-height: 16px;
+}
+
+/* li의 마지막(last)의 after 순서가 중요 */
+#header_in .q_mn li:last-child::after {
+    content: " ";
+    padding: 0 0px;
+    line-height: 0px;
+}
+
+#header_in .q_mn li a {
+    font-size: 16px;
+}
+
+#header_in .input {
+    float: left;
+    margin: 20px 0 0 10px;
+    width: 260px;
+    height: 25px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+#header_in .input span {
+    float: left;
+    padding-left: 10px;
+    font-size: 10px;
+    line-height: 25px;
+}
+
+#header_in .input a {
+    float: right;
+}
+
+
+
+#nav {
+    width: 100%;
+    height: 46px;
+    background: url(../images/nav_area.jpg) no-repeat 50% 0;
+    /* background-color: aquamarine; */
+}
+
+#nav ul {
+    /* 기준을 잡고 위치를 정해야 되서 width를 넣어준다. */
+    margin: 0 auto;
+    width: 1005px;
+}
+
+#nav ul li {
+    float: left;
+}
+
+
+#main_img {
+    width: 100%;
+    height: 465px;
+    background: url(../images/main_img.jpg) no-repeat 50% 0;
+    /* background-color: cadetblue; */
+}
+
+#contents {
+    width: 100%;
+    /* background-color: blanchedalmond; */
+    padding-top: 45px;
+    padding-bottom: 75px;
+}
+
+#item {
+    margin: 0 auto;
+    width: 1000px;
+    height: 260px;
+    /* background-color: rgb(80, 55, 247); */
+}
+
+#item_h {
+    float: left;
+    width: 180px;
+    height: 260px;
+    /* background-color: rgb(77, 108, 245); */
+}
+
+#item_h .ttl {
+    padding: 20px 0;
+    font-size: 28px;
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+}
+
+#item_h .menu {
+    margin-top: 25px;
+}
+
+#item_h .menu li {
+    margin-bottom: 10px;
+}
+
+#item_h .menu li a {
+    font-size: 16px;
+    color: #555;
+}
+
+/* 마우스 올리면 밑줄 생기는 거 */
+#item_h .menu li:hover a {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* 마우스 올릴 때 화살표 표시 */
+#item_h .menu li:hover::after {
+    font-size: 18px;
+    color: orange;
+    content: ">";
+}
+
+#item_b {
+    float: right;
+    width: 792px;
+    height: 260px;
+    /* background-color: rgb(77, 108, 245); */
+}
+
+#item_b li {
+    margin-right: 10px;
+    float: left;
+    width: 188px;
+    height: 260px;
+    border: 1px solid #ccc;
+    /* border 선 값도 포함해서 width 계산해야 한다. border는 바깥으로 */
+}
+
+#item_b li:last-child {
+    margin-right: 0px;
+}
+
+#item_b li img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+#item_b li h5 {
+    padding: 10px 0 0 10px;
+    font-size: 16px;
+}
+
+#item_b li p {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+
+
+/* 내가 한 거 */
+/* #item .popular {
+    float: left;
+    width: 190px;
+    height: 260px;
+    background-color: rgb(73, 63, 52);
+}
+
+#item .shoes {
+    float: right;
+    width: 790px;
+    height: 260px;
+    background-color: rgb(197, 141, 81);
+}
+
+#item .shoes li {
+    float: left;
+    margin-left: 10px;
+    width: 185px;
+    height: 260px;
+    background-color: coral;
+}
+
+#item .shoes li:last-child {
+    margin-right: 0px;
+} */
+
+
+
+#banner {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 280px;
+    /* background-color: rgb(169, 159, 236); */
+}
+
+#banner>a {
+    float: left;
+    margin-right: 18px;
+}
+
+#banner>a:last-child {
+    margin-right: 0px
+}
+
+
+
+#movie {
+    margin-top: 45px;
+    width: 100%;
+    height: 300px;
+    background: url(../images/movie.png) no-repeat 50% 0;
+    /* background-color: rgb(81, 172, 172); */
+    position: relative;
+}
+
+/*
+    버튼 만들기1
+    padding을 사용하면 position을 설정하고
+    기준을 잡기 위해 movie에도 position 설정을 해야한다.
+*/
+#movie a.btn01 {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+/*
+    버튼 만들기2
+    display: block;를 이용하여 만드는 방법
+    width와 height의 값을 주면 margin을 사용할 수 있다.
+*/
+#movie a.btn02 {
+    margin: 0 auto;
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+
+
+#style {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 260px;
+    /* background-color: rgb(101, 161, 240); */
+}
+
+#style_h {
+    float: left;
+    width: 190px;
+    height: 260px;
+    /* background-color: rgb(247, 138, 192); */
+}
+
+#style_b {
+    float: right;
+    width: 800px;
+    height: 260px;
+    /* background-color: rgb(247, 138, 192); */
+}
+
+#style_b figure {
+    float: left;
+    width: 190px;
+    height: 260px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 13.3px;
+}
+
+#style_b figure:last-child {
+    margin-right: 0px;
+}
+
+#style_b figure img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+#style_b figcaption {
+    padding: 10px;
+}
+
+#style_b h4 {
+    font-size: 16px;
+}
+
+#style_b p {
+    font-size: 12px;
+}
+
+
+
+#go_btns {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 395px;
+    /* background-color: rgb(44, 41, 68); */
+}
+
+#go_btns .group {
+    float: left;
+    width: 492px;
+    height: 395px;
+}
+
+#go_btns .group a:last-child {
+    display: block;
+    margin-top: 14px;
+    height: 189px;
+}
+
+
+#go_btns>a {
+    float: right;
+}
+
+
+#footer {
+    width: 100%;
+}
+
+#footer .group {
+    width: 100%;
+    height: 160px;
+    /* background-color: darkslateblue; */
+    background: url(../images/footer_top_bg.jpg) repeat-x 0 0;
+}
+
+
+#footer .group .banner_box {
+    margin: 0 auto;
+    width: 1000px;
+    height: 110px;
+    /* background-color: darkcyan; */
+}
+
+#footer .group .banner_box>img {
+    float: left;
+}
+
+#footer .group .notice {
+    margin: 0 auto;
+    width: 1000px;
+    height: 50px;
+    /* background-color: bisque; */
+}
+
+/* 속성이 중복이면 ","로 그룹으로 묶을 수 있다. */
+#footer .group .notice .ttl,
+#footer .group .notice .txt {
+    float: left;
+    font-size: 13px;
+    color: #fff;
+    margin-right: 30px;
+    line-height: 50px;
+}
+
+#footer .group .notice .date {
+    float: right;
+    font-size: 13px;
+    color: #fff;
+    margin-right: 20px;
+    line-height: 50px;
+}
+
+#f_top {
+    width: 100%;
+    height: 290px;
+    /* background-color: darkgreen; */
+}
+
+#f_top>div {
+    margin: 0 auto;
+    width: 1000px;
+    height: 290px;
+    /* background-color: rgb(235, 211, 183); */
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+#f_top .mainmn {
+    margin-left: 30px;
+    float: left;
+}
+
+
+#f_top .mainmn>li {
+    float: left;
+    margin-right: 70px;
+    text-align: left;
+}
+
+#f_top .mainmn>li:last-child {
+    margin-right: 0px;
+}
+
+
+#f_top .mainmn>li h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#f_top .submn li {
+    margin-bottom: 5px;
+}
+
+#f_top .submn li a {
+    font-size: 14px;
+}
+
+
+#f_top .callcenter {
+    float: right;
+    width: 240px;
+    /* background-color: aqua; */
+}
+
+#f_top .callcenter .ttl {
+    border-bottom: 1px solid #555;
+    /* text-decoration 을 하면 글자 크기만큼만 선이 들어간다.
+    예제의 경우 글자를 초과하여 선이 들어가기 때문에 border-bottom 을 사용 */
+    font-size: 30px;
+    font-weight: 800;
+    color: #000;
+    text-align: center;
+    padding: 0 0 10px;
+    margin-bottom: 15px;
+}
+
+#f_top .callcenter .s_ttl {
+    font-size: 15px;
+}
+
+#f_top .callcenter .txt {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+#f_top .callcenter .appmn {}
+
+#f_top .callcenter .appmn>li {
+    margin-right: 5px;
+    float: left;
+    width: 110px;
+    height: 75px;
+    border: 1px solid #ccc;
+}
+
+
+#f_bottom {
+    width: 100%;
+    height: 150px;
+    /* background-color: darkgoldenrod; */
+}
+
+#f_bottom>div {
+    margin: 0 auto;
+    width: 1000px;
+    height: 150px;
+    /* background-color: rgb(238, 115, 222); */
+}
+
+#f_bottom .infomn {}
+
+#f_bottom .infomn li {
+    float: left;
+}
+
+#f_bottom .infomn li:after {
+    display: inline-block;
+    content: '/';
+    font-size: 6px;
+    padding: 0 10px;
+    position: relative;
+    top: -2.5px;
+}
+
+#f_bottom .infomn li:last-child::after {
+    content: ' ';
+    padding: 0 0;
+}
+
+#f_bottom .infomn li a {
+    font-size: 15px;
+}
